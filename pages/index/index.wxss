@@ -1,0 +1,280 @@
+/**index.wxss**/
+.share{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+text{
+  letter-spacing: 2rpx;
+  font-size: 22rpx;
+}
+.index-container{
+  margin-bottom: 180rpx;
+}
+.top{
+  background: #01b35c;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.zaobao-box{
+  display: flex;
+  align-items: center;
+}
+.zaobao-box image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.search-box{
+  width: 60%;
+  background: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  color: #bfbfbf;
+  font-size: 22rpx;
+}
+.search-box image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.share-box{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.share-box image{
+  width: 60rpx;
+  height: 40rpx;
+}
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.functional-box{
+  padding: 20rpx;
+  background: #fff;
+}
+
+.functional-top{
+  display: flex;
+  justify-content: space-between; 
+  font-size: 24rpx;
+}
+.number1, .number2, .number3,.number4, .number5{
+  width: 18%;
+  text-align: center;
+}
+.functional-number{
+  background:#FF6347;
+  border-radius: 40rpx;
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.functional-top text{
+  width: 100%;
+}
+
+.functional-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.functional-block {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20rpx 0 ;
+}
+.functional-block image{
+    width: 60rpx;
+    height: 60rpx;
+    margin:  0 auto;
+    margin-bottom: 15rpx;
+}
+
+.type{
+  font-size: 26rpx;
+  font-weight: 500;
+}
+.box{
+  background: #fff;
+  margin-top: 10rpx; 
+  padding: 0 20rpx;
+}
+.hot-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;  
+}
+
+.heng-box{
+  display: flex;
+  border-top: solid 2rpx gainsboro;
+  /* border-bottom: solid 2rpx gainsboro; */
+  padding: 20rpx 0;
+}
+.heng-left{
+  width: 200rpx;
+  height: 150rpx;
+  position: relative;
+}
+.heng-left image{
+  height: 100%;
+  width: 100%;
+}
+.heng-left .guanzhu{
+  color: white;
+  font-weight: 550;
+  position: absolute;
+  bottom: 16rpx;
+  left: 16rpx;
+}
+
+.heng-talk image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.heng-right{
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heng-louPanName{
+  font-size: 28rpx;
+  font-weight: 800;
+  width: 180rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  letter-spacing: 2rpx;
+}
+.heng-price{
+  color: darkorange;
+  font-weight: 800;
+  font-size: 24rpx;
+}
+.heng-location-and-date{
+  color: #ababab;
+}
+.heng-location{
+  margin-right:20rpx;
+}
+.heng-status-and-talk, .heng-name-and-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heng-status text{
+  background: #c1cdb7;
+  color: #8696a6;
+  padding: 5rpx 8rpx;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+}
+
+.hot-bottom{
+  padding: 20rpx 0;
+  border-top: solid 2rpx gainsboro;
+  display: flex;
+  justify-content: space-between;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+
+.lou-image{
+  width: 200rpx;
+  height: 150rpx;
+  position: relative;
+}
+.lou-image image{
+  height: 100%;
+  width: 100%;
+}
+.lou-image .guanzhu{
+  color: white;
+  font-weight: 550;
+  position: absolute;
+  bottom: 16rpx;
+  left: 16rpx;
+}
+.lou-name{
+  margin-top: 10rpx;
+  width: 200rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.lou-status-talk{
+  display: flex;
+  justify-content: space-between;  
+  margin: 10rpx 0;
+}
+.lou-status{
+  background: #c1cdb7;
+  color: #8696a6;
+  padding: 5rpx 8rpx;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+}
+
+.lou-talk{
+  display: flex;
+  align-items: center;
+}
+.lou-talk image{
+  width:24rpx;
+  height:24rpx;
+  margin-right: 8rpx;
+}
+
+
+/* new */
+.new-status text{
+  color: #08c469b9;
+  background: #08af7767;
+  margin-right: 5rpx;
+}
+
+.lou-info{
+  /* width: 100%; */
+  padding: 10rpx;
+  font-size: 20rpx;
+  background: rgba(255, 140, 0, 0.479);
+  color: chocolate;
+}
+.lou-info text{
+  margin-right: 40rpx;
+}
+
+
+
+
+
+
+

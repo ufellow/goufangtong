@@ -1,0 +1,6 @@
+<!--pages/quan/quan.wxml-->
+<import src='../UserTabbar/tabbar.wxml' />
+<view>
+    <conditions></conditions>
+</view>
+<template is='tabbar' data='{{...tabBar}}'></template>

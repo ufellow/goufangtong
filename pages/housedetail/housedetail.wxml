@@ -1,0 +1,111 @@
+<!--pages/housedetail/housedetail.wxml-->
+<view class='housedetail-container'>
+    <view class='swipper-box'>
+      <swiper
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          indicator-color='#ccc'
+          indicator-active-color='#fff'
+          circular="{{circular}}"
+        bindchange='handleChange'>
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" 
+            width="355" height="355" />
+          </swiper-item>
+        </block>   
+    </swiper>       
+   <view class='seen-index'>
+      <view class='seen'>22w</view>
+      <view class='index'>{{current+1}} / {{imgUrls.length}}</view>
+    </view>
+  </view>
+  <view class='houseName-box'>
+    <view class='houseName-box-top'>
+      <view class='houseName'>{{name}}</view>
+      <view class='share'>分享 </view>
+    </view>
+    <view class='houseName-box-bottom'>
+        <image src='/images/dingwei.png'></image>
+        <text>{{houseInfo.address}} ></text>
+    </view>   
+  </view>
+  <view class='detailinfo-box'>
+    
+  <view class='title'>  楼盘基本信息 </view>
+  <view class='content-box'>
+     <view class='content-list'>
+         <text class='name'>物业类别：</text>
+         <text class='content'>{{houseInfo.type}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'> 产权年限：</text>
+         <text class='content'>{{houseInfo.years}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'> 环线位置：</text>
+         <text class='content'>{{houseInfo.address}}</text>
+     </view>
+      <view class='content-list'> 
+         <text class='name'>开发商：</text>
+         <text class='content'>{{houseInfo.developers}}</text>
+     </view>
+      <view class='content-list'>
+ 
+         <text class='name'>面积：</text>
+         <text class='content'>{{houseInfo.area_covered}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>建筑面积：</text>
+         <text class='content'>{{houseInfo.built_area }}</text>
+     </view>
+     <view class='content-list'>
+         <text class='name'>容积率：</text>
+         <text class='content'>{{houseInfo.plot_ratio }}</text>
+     </view>
+     <view class='content-list'>
+         <text class='name'>绿化率：</text>
+         <text class='content'>{{houseInfo.green_coverage }}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>停车位：</text>
+         <text class='content'>{{houseInfo.car }}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>楼栋总数：</text>
+         <text class='content'>{{houseInfo.numbers}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>总户数：</text>
+         <text class='content'>{{houseInfo.people}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>物业公司：</text>
+         <text class='content'>{{houseInfo.wuyecompany}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>物业费：</text>
+         <text class='content'>{{houseInfo.wuyeprice}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>楼层状况：</text>
+         <text class='content'>{{houseInfo.status}}</text>
+     </view>
+      <view class='content-list'>
+         <text class='name'>周边设施：</text>
+         <text class='content'>{{houseInfo.facility}}</text>
+     </view>
+
+      <!-- <view class='content-list'>
+         <text class='name'>项目简介：</text>
+         <text class='content'>{{houseInfo.brief introduction }}</text>
+     </view> -->
+      <!--  
+ 
+ 
+brief introduction 项目简介 -->
+  </view>  
+  </view>
+</view>

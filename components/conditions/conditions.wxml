@@ -1,0 +1,63 @@
+<!--components/conditions/components.wxml-->
+<view class='condition-container'>
+    <view class='condition-title-box'>
+       <block wx:for="{{tabList}}">
+          <view class='condition-title {{currentIndex == index?"active":""}}' wx:key="{{index}}" bindtap='tabChange' data-tabindex='{{index}}'>
+            <text>{{item}}</text>
+            <image wx:if="{{currentIndex != index}}" src='/images/down.png'></image>
+            <image wx:else src='/images/down_selected.png'></image>
+          </view>
+       </block>        
+    </view>
+
+    <view class='condition-bottom'>
+
+      <block wx:if="{{currentIndex == 0}}"> 
+        <view class='condition-content-region'>
+          <view class='condition-region-left'>
+              <view  wx:for="{{ways}}" wx:key="{{index}}" class='condition-town-metro {{waysIndex == index?"wayActive":""}}' data-wayindex="{{index}}" bindtap='selectedWays'>{{item}}</view>
+          </view>
+          <view wx:if="{{waysIndex == 0}}" class='condition-region-right'>
+            <view class='condition-region-right1'>
+              <block wx:for="{{regions}}">
+                <view class='condition-regions {{item.checked?"regionActive":""}}' data-regionindex='{{index}}' bindtap='selectRegions'>{{item.name}}</view>
+              </block>
+            </view>
+            <view wx:if="{{regionIndex != 0}}" class='condition-region-right2'>
+                <label class='checkbox {{isSelectedAll?"townSelectedAll":""}}' bindtap='selectTownAll'>不限</label>
+                <checkbox-group class='town-checkbox' bindchange="checkboxChange" >
+                <block wx:for="{{towns}}">                            
+                  <label wx:if="{{index != 0}}" class="checkbox {{item.checked?'checkboxActive':''}}">
+                  {{item.value}}
+                    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>                  
+                  </label>
+                  </block>
+  </checkbox-group>
+            </view>
+          </view>
+          <!-- 城区条件选择end -->
+
+          <view wx:if="{{waysIndex == 1}}" class='condition-metro'>
+            <text bindtap='selectMetro'  wx:for="{{metros}}" data-metroindex='{{index}}' class=' metro-item {{item.isActive == true?"metroActive":""}}'>{{item.name}}</text>
+          </view>
+          <!-- 地铁选择end -->
+        </view>
+      </block>
+    <!-- 户型选择 -->
+      <block wx:if="{{currentIndex == 1}}" >
+          <view class='condition-content-box' >
+              <text wx:for="{{houseType}}" wx:key="{{index}}" class='condition-housetype {{item.isActive?"houseActive":""}}'  data-typeIndex='{{item.typeIndex}}' bindtap='selectType'>{{item.name}}</text>
+          </view>
+      </block>
+      <!-- 面积 -->
+      <block wx:if="{{currentIndex == 2}}" >
+          <view class='condition-content-box' >
+              <text wx:for="{{houseArea}}" wx:key="{{index}}" class='condition-housetype {{item.isActive?"houseActive":""}} '  data-areaIndex='{{item.areaIndex}}' bindtap='selectArea'>{{item.name}}</text>
+          </view>
+      </block>
+        <view wx:if="{{currentIndex != null}}" class='condition-clear-confirm'>
+          <view class='condition-clear' bindtap='handleClear'>清除</view>
+          <view class='condition-confirm' bindtap='confirm'> 确定</view>
+        </view>
+    </view>
+</view>

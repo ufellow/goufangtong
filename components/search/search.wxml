@@ -1,0 +1,17 @@
+  <view class='search-container'>
+    <view class='top'>
+    <!-- <view class='zaobao-box'>
+      <image src='/images/zaobao.png'></image>
+      <text>早报</text>
+    </view>     -->
+    <view class='search-box' bindtap='goSearch'>
+      <image src='/images/search.png'></image>
+      <text>搜索：新景</text>      
+    </view>
+    <view class='share-box'>
+        <image src='/images/fenxiang.png'></image>
+        <text>分享</text>
+        <button class='share' open-type='share'></button>
+    </view>
+  </view>
+  </view>

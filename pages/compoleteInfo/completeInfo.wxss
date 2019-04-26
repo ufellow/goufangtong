@@ -1,0 +1,44 @@
+/* pages/compoleteInfo/completeInfo.wxss */
+page{
+  letter-spacing: 4rpx;
+}
+.page-title{
+  padding: 20rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.formList{
+  background: #fff;
+  padding: 0 30rpx;
+}
+.inputBox{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  align-items: center;
+  border-bottom: 2rpx solid grey;
+  padding: 15rpx 15rpx 15rpx 0;
+}
+.inputBox text{
+  width: 150rpx;
+}
+.inputBox input{
+  flex: 1;
+}
+.explain{
+  padding: 20rpx 30rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+}
+.comfirm{
+  /* width: 90%; */
+  margin:  20rpx;
+  background: #18b680;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  height: 80rpx;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  }

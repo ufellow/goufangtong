@@ -1,0 +1,60 @@
+<!--pages/more/more.wxml-->
+<!-- <import src='../UserTabbar/tabbar.wxml' /> -->
+<view class='more-container'>
+    <search></search>
+    <conditions bindgetConditions="getConditionResult"></conditions>
+    <view class='more-content'  wx:if="{{houseList.length > 0}}">
+        <view class='swipper-box'>
+          <swiper
+              indicator-dots="{{indicatorDots}}"
+              autoplay="{{autoplay}}"
+              interval="{{interval}}"
+              duration="{{duration}}"
+              circular="{{circular}}"
+              indicator-color='#ccc'
+              indicator-active-color='#fff'
+            >
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" 
+              width="355" height="150" />
+            </swiper-item>
+          </block>
+        </swiper>       
+        </view>
+        <!-- swiper end -->
+      <view class='displays'>
+        <view class='heng-box' wx:for="{{houseList}}" wx:key="index" bindtap='clickInto' data-hid='{{item.id}}' data-name='{{item.name}}'>
+          <view class='heng-left'>
+            <image src="{{item.picture}}"></image>
+            <view class='guanzhu'>
+                <text>222w</text>
+            </view>
+          </view>
+          <view class='heng-right'>
+             <view class='heng-name-and-price'>
+               <view class='heng-louPanName'>{{item.name}}</view>
+               <view class='heng-price' wx:if="{{item.price!=''}}">{{item.price}}元/m²</view>
+              </view>
+              <view class='heng-location-and-date'>
+                  <text class='heng-location'>{{item.city}}</text>
+                  <text class='heng-date'>摇号时间：2019.04.22</text>
+              </view>
+              <view class='heng-status-and-talk'>
+                  <view class='heng-status'>
+                    <text>在售</text>
+                  </view>
+                  <view class='heng-talk'>
+                    <image src='/images/zixun.png'></image>
+                    <text>200</text>
+                  </view>
+              </view>
+          </view>
+       </view>
+      </view>
+    </view>
+.     <view class='nodata' wx:if="{{houseList.length == 0}}">暂无数据</view>
+    <tohome></tohome>
+</view>
+<!-- <template is='tabbar' data='{{...tabBar}}'></template> -->
+

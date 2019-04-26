@@ -1,0 +1,331 @@
+<!--index.wxml-->
+<import src="../UserTabbar/tabbar.wxml" />
+
+<view class="index-container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class='top'>
+    <view class='zaobao-box'>
+      <image src='/images/zaobao.png'></image>
+      <text>早报</text>
+    </view>    
+    <view class='search-box' bindtap='goSearch'>
+      <image src='/images/search.png'></image>
+      <text>搜索：新景</text>      
+    </view>
+    <view class='share-box'>
+        <image src='/images/fenxiang.png'></image>
+        <text>分享</text>
+        <button open-type='share' class='share'></button>
+    </view>
+  </view>
+  <view class='swipper-box'>
+    <swiper
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        indicator-color='#ccc'
+        indicator-active-color='#fff'
+      >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" 
+        width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>       
+  </view>
+  <!-- swiper--end -->
+  <view class='functional-box'>
+    <view class='functional-top'>
+      <view class='number1'>
+          <navigator url='/pages/more/more?status=1'>
+            <view class='functional-number'>{{houseList.hot.length}}</view>
+            <text>热门楼盘</text>
+          </navigator>
+      </view>    
+       <view class='number2'>
+          <navigator class='more' url='/pages/more/more?status=2'>
+            <view class='functional-number'>{{houseList.booking.length}}</view>
+            <text>即将预售</text>
+          </navigator>
+      </view> 
+       <view class='number3'>
+            <view class='functional-number'>88</view>
+            <text>最新取证</text>
+      </view> 
+       <view class='number4'>
+           <navigator class='more' url='/pages/more/more?status=4'>
+              <view class='functional-number'>{{houseList.latesdyao.length}}</view>
+              <text>最新摇号</text>
+           </navigator>
+      </view> 
+       <view class='number5'>
+          <navigator class='more' url='/pages/more/more?status=5'>
+              <view class='functional-number'>{{houseList.lastyao.length}}</view>
+              <text>摇号剩余</text>
+          </navigator>
+      </view> 
+    </view>
+    <!-- top--end -->
+    <view class='functional-bottom'>
+      <block wx:for="{{functionalList}}">
+          <view class='functional-block' wx:key="{{index}}">
+             <image src='/images/{{item.image}}'></image>
+             <text>{{item.title}}</text>
+          </view>
+      </block>
+    </view>
+    <!-- bottom--end -->    
+  </view>
+    <!-- functional--end -->
+  <!-- 热门楼盘 start --> 
+    <view class='box'>
+       <view class='hot-top'>
+           <text class='type'>热门楼盘</text>
+          
+           <navigator class='more' url='/pages/more/more?status=1'>更多></navigator>
+       </view>
+       <!-- 横向展示 start -->
+       <view wx:if="{{houseList.hot.length>0}}" class='heng-box' data-hid='{{houseList.hot[0].id}}' data-name='{{houseList.hot[0].name}}' bindtap='clickInto' >
+          <view class='heng-left'>
+            <image src='{{houseList.hot[0].picture}}'></image>
+            <view class='guanzhu'>
+                <text>{{houseList.hot[0].follered}}w</text>
+            </view>
+          </view>
+          <view class='heng-right'>
+             <view class='heng-name-and-price'>
+               <view class='heng-louPanName'>{{houseList.hot[0].name}}</view>
+               <view class='heng-price'>精装均价{{houseList.hot[0].price}}元/m²</view>
+              </view>
+              <view class='heng-location-and-date'>
+                  <text class='heng-location'>{{item.city}}</text>
+                  <text class='heng-date' >摇号时间：2019.04.22</text>
+              </view>
+              <view class='heng-status-and-talk'>
+                  <view class='heng-status'>
+                    <text>在售</text>
+                  </view>
+                  <view class='heng-talk'>
+                    <image src='/images/zixun.png'></image>
+                    <text>200</text>
+                  </view>
+              </view>
+          </view>
+       </view>
+       <!-- 横向end -->   
+      <view class='hot-bottom'>   
+       <block  wx:for="{{houseList.hot}}" wx:key="index">
+          <view class='list' wx:if="{{index!=0&&index<=3}}" data-hid='{{item.id}}' data-name='{{item.name}}' bindtap='clickInto'>
+              <view class='lou-image'>
+                <image src='{{item.picture}}'></image>
+                <view class='guanzhu'>
+                  <text>{{item.follered}}w</text>
+                </view>
+               </view>
+            <view class='lou-name'>
+              {{item.name}}
+            </view>
+            <view class='lou-status-talk '>
+                <text class='lou-status '>{{item.metro}}</text>
+                <view class='lou-talk'>
+                    <image src='/images/zixun.png'></image>
+                      <text>200</text>
+                </view>
+            </view>
+           </view>  
+        </block>   
+      </view>
+   </view>
+  <!-- 热门楼盘 end -->
+
+<!-- booking start -->
+     <view class='box'>
+       <view class='hot-top'>
+           <text class='type'>即将预售</text>
+            
+           <navigator class='more' url='/pages/more/more?status=2'>更多></navigator>
+       </view>
+       <!-- 横向展示 start -->
+    <!-- <block wx:for="{{houseList.booking[0]}}" wx:key="index"> -->
+       <view class='heng-box' wx:if="{{houseList.booking.length>0}}" data-hid='{{houseList.booking[0].id}}' data-name='{{houseList.booking[0].name}}' bindtap='clickInto'>
+          <view class='heng-left'>
+            <image src='{{houseList.booking[0].picture}}'></image>
+            <view class='guanzhu'>
+                <text>{{houseList.booking[0].follered}}w</text>
+            </view>
+          </view>
+          <view class='heng-right'>
+             <view class='heng-name-and-price'>
+               <view class='heng-louPanName'>{{houseList.booking[0].name}}</view>
+               <view class='heng-price'>精装均价{{houseList.booking[0].price}}元/m²</view>
+              </view>
+              <view class='heng-location-and-date'>
+                  <text class='heng-location'>{{houseList.booking[0].city}}</text>
+                  <text class='heng-date' >摇号时间：2019.04.22</text>
+              </view>
+              <view class='heng-status-and-talk'>
+                  <view class='heng-status'>
+                    <text>在售</text>
+                  </view>
+                  <view class='heng-talk'>
+                    <image src='/images/zixun.png'></image>
+                    <text>200</text>
+                  </view>
+              </view>
+          </view>
+       </view>
+       <!-- </block> -->
+       <!-- 横向end -->   
+      <view class='hot-bottom'>   
+       <block wx:for="{{houseList.booking}}" wx:key="index">
+          <view class='list' wx:if="{{index!=0&&index<=3}}"
+            data-hid='{{item.id}}' data-name='{{item.name}}' bindtap='clickInto'
+          >
+              <view class='lou-image'>
+                <image src='{{item.picture}}'></image>
+                <view class='guanzhu'>
+                  <text>{{item.follered}}w</text>
+                </view>
+            </view>
+            <view class='lou-name'>
+              {{item.name}}
+            </view>
+            <view class='lou-status-talk '>
+                <text class='lou-status '>{{item.metro}}</text>
+                <view class='lou-talk'>
+                    <image src='/images/zixun.png'></image>
+                      <text>200</text>
+                </view>
+            </view>
+          </view>
+       </block>
+      </view>
+   </view>
+
+<!-- booking end -->
+  <!-- 最新楼盘 start -->
+  <view class='box new'>
+      <view class='hot-top'>
+           <text class='type'>最新开盘</text>           
+          <navigator class='more' url='/pages/more/more?status=3'>更多></navigator>
+       </view>
+       <block wx:for="{{houseList.latestOpen}}" wx:key="index">
+       <view class='heng-box' data-hid='{{item.id}}' data-name='{{item.name}}' bindtap='clickInto'>
+          <view class='heng-left'>
+            <image src='{{item.picture}}'></image>
+            <view class='guanzhu'>
+                <text>{{item.follered}}w</text>
+            </view>
+          </view>
+          <view class='heng-right'>
+             <view class='heng-name-and-price'>
+               <view class='heng-louPanName'>{{item.name}}</view>
+               <view class='heng-price' wx:if="{{item.price != ''}}">精装均价{{item.price}}元/m²</view>
+              </view>
+              <view class='heng-location-and-date'>
+                  <text class='heng-location'>{{item.city}}</text>
+                  <text class='heng-date'>摇号时间：2019.04.22</text>
+              </view>
+              <view class='heng-status-and-talk'>
+                  <view class='heng-status new-status'>
+                    <text>在售</text>
+                  </view>
+                  <view class='heng-talk'>
+                    <image src='/images/zixun.png'></image>
+                    <text>200</text>
+                  </view>
+              </view>
+          </view>
+       </view>
+       </block>
+  </view>
+  <!-- 最新楼盘 end -->
+
+    <!-- 最新摇号 start -->
+      <view class='box new'>
+          <view class='hot-top'>
+              <text class='type'>最新摇号</text>           
+              <navigator class='more' url='/pages/more/more?status=4'>更多></navigator>
+          </view>
+    <block wx:for="{{houseList.latestyao}}" wx:key="index">
+          <view class='heng-box' data-hid='{{item.id}}' data-name='{{item.name}}' bindtap='clickInto'>
+              <view class='heng-left'>
+                <image src='{{item.picture}}'></image>
+                <view class='guanzhu'>
+                    <text>{{item.follered}}w</text>
+                </view>
+              </view>
+              <view class='heng-right'>
+                <view class='heng-name-and-price'>
+                  <view class='heng-louPanName'>{{item.name}}</view>
+                  <view class='heng-price' wx:if="{{item.price!=''}}">精装均价{{item.price}}元/m²</view>
+                  </view>
+                  <view class='heng-location-and-date'>
+                      <text class='heng-location'>{{item.city}}</text>
+                      <text class='heng-date'>摇号时间：2019.04.22</text>
+                  </view>
+                  <view class='heng-status-and-talk'>
+                      <view class='heng-status new-status'>
+                        <text>摇号完成</text> <text>摇号结果</text>
+                      </view>
+                      <view class='heng-talk'>
+                        <image src='/images/zixun.png'></image>
+                        <text>200</text>
+                      </view>
+                  </view>
+              </view>
+          </view>
+          <view class='lou-info'>
+              <text>总套数：224</text>
+              <text>中签率： 普通 40.00%</text>
+              <text>刚需 40.00%</text>
+          </view>
+    </block>
+
+          
+      </view>
+  <!-- 最新摇号 end -->
+  <!-- 摇号剩余 start -->
+    <view class='box last'>
+         <view class='hot-top'>
+           <text class='type'>摇号剩余</text>           
+          <navigator class='more' url='/pages/more/more?status=5'>更多></navigator>
+       </view>
+       <view class='hot-bottom'>
+      <block wx:for="{{houseList.lastyao}}"  wx:key="index">
+        <view class='list' data-hid='{{item.id}}' data-name='{{item.name}}' bindtap='clickInto'>
+         <view class='lou-image'>
+            <image src='{{item.picture}}'></image>
+            <view class='guanzhu'>
+                <text>{{item.follered}}w</text>
+            </view>
+          </view>
+          <view class='lou-name'>
+            {{item.name}}
+          </view>
+          <view class='lou-status-talk '>
+              <text class='lou-status' wx:if="{{item.is_jing == 1}}">近地铁</text>
+              <view class='lou-talk'>
+                   <image src='/images/zixun.png'></image>
+                    <text>200</text>
+              </view>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+   <!-- 摇号剩余 end -->
+
+</view>
+<template is='tabbar' data='{{...tabBar}}'></template>

@@ -1,0 +1,43 @@
+/* components/search/search.wxss */
+.top{
+  background: #01b35c;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.search-box{
+  flex: 1;
+  background: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  color: #bfbfbf;
+  font-size: 22rpx;
+  margin-right: 20rpx;
+  padding: 15rpx 0;
+}
+.search-box image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.share-box{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.share{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+.share-box image{
+  width: 60rpx;
+  height: 40rpx;
+}

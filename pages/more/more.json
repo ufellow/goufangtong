@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+        "conditions": "../../components/conditions/conditions",
+        "search": "../../components/search/search",
+        "tohome": "../../components/toHome/toHome"
+  }
+}

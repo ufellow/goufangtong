@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tohome": "../../components/toHome/toHome"
+  }
+}

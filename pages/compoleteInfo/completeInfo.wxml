@@ -1,0 +1,25 @@
+<!--pages/compoleteInfo/completeInfo.wxml-->
+<view class='complete-container'>
+  <view class='page-title'>绑定个人信息，查询摇号更方便</view>
+  <view class='formList'>
+    <view class='inputBox'>
+      <text>姓名</text>
+      <input type='text' placeholder='请输入姓名' bindinput='getInputValue' data-title='name'>{{name}}</input>
+    </view>
+    <view class='inputBox'>
+      <text>身份证号</text>
+      <input type='idcard' placeholder='请输入身份证号'  data-title='idcard' bindinput='getInputValue'>{{idcard}}</input>
+    </view>
+    <view class='inputBox'>
+      <text>手机号</text>
+      <input type='number' placeholder='请输入手机号'  data-title='phone' bindinput='getInputValue'>{{phone}}</input>
+    </view>    
+  </view>
+  <view class='explain'>
+    绑定个人身份信息，部分楼盘可直接获取摇号编码，查询摇号结果更方便，成都购房通绝不外泄你的分发信息。
+  </view>
+  <view class='comfirm' bindtap='comfirm'>
+      确定
+  </view>  
+  <tohome></tohome>
+</view>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/memberCenter/memberCenter",
+    "pages/quan/quan",
+    "pages/more/more",
+    "pages/search/search",
+    "pages/personal/personal",
+    "pages/housedetail/housedetail",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/compoleteInfo/completeInfo",
+    "pages/userinfo/userinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#01b35c",
+    "navigationBarTitleText": "购房通",
+    "navigationBarTextStyle": "black"
+  }
+}

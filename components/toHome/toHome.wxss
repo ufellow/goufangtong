@@ -1,0 +1,19 @@
+/* components/toHome/toHome.wxss */
+
+.goToHome{
+  background: #18b680;
+  color: white;
+  width: 150rpx;
+  position: fixed;
+  bottom: 180rpx;
+  right: -15rpx;
+  border-radius: 30rpx;
+  padding: 10rpx;
+  z-index: 999;
+  opacity: 0.8;
+}
+.goToHome image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx;
+}

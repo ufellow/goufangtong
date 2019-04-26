@@ -1,0 +1,185 @@
+/* pages/search/search.wxss */
+
+.search-top{
+  display: flex;
+  padding: 20rpx;
+}
+.search-top-left{
+    flex: 1;
+    display: flex;
+    margin-right: 20rpx;
+    background: white;
+    border-radius: 5rpx;
+
+}
+.select{
+  padding: 20rpx;
+}
+.selectedItem{
+  position: relative;
+  width: 110rpx;
+}
+.selectList{
+  position: absolute;
+  top: 100rpx;
+  left: 20rpx;
+  background: #fff;
+  box-shadow: 0rpx 0rpx 2rpx #6b6b6b;
+  padding: 0 10rpx;
+}
+.select-item{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #bebebe;
+  text-align: center;
+}
+.selectedActive{
+  color: #15c9a0;
+}
+.search-input-box{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.search-input-box image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+.search-input-box input{
+  flex: 1;
+}
+.search-top-right{
+  padding: 16rpx;
+  color: #036134;
+}
+
+.search-bottom{
+  background: white;
+}
+.search-history{
+  padding: 30rpx;
+}
+.search-history-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-history-title image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.hot-search{
+  padding: 30rpx;
+}
+.hot-search-title, .search-history-title{
+  margin-bottom: 24rpx;
+  color: #848484;
+}
+.box{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.box text{
+  padding: 10rpx 30rpx;
+  background-color: #f0f0f0;
+  color: #6b6b6b;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  letter-spacing: 2rpx;
+}
+.goToHome{
+  background: #18b680;
+  color: white;
+  width: 150rpx;
+  position: fixed;
+  bottom: 180rpx;
+  right: -15rpx;
+  border-radius: 30rpx;
+  padding: 10rpx;
+}
+.goToHome image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 10rpx;
+}
+
+.displays{
+  padding: 15rpx 20rpx;
+  background-color: #fff;
+}
+.heng-box{
+  display: flex;
+  border-top: solid 2rpx gainsboro;
+  border-bottom: solid 2rpx gainsboro;
+  padding: 20rpx 0;
+}
+.heng-box:first-child{
+  border: none;
+}
+.heng-left{
+  width: 200rpx;
+  height: 150rpx;
+  position: relative;
+}
+.heng-left image{
+  height: 100%;
+  width: 100%;
+}
+.heng-left .guanzhu{
+  color: white;
+  font-weight: 550;
+  position: absolute;
+  bottom: 16rpx;
+  left: 16rpx;
+}
+
+.heng-talk image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.heng-right{
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heng-right{
+  padding: 5rpx 8rpx;
+}
+.heng-louPanName{
+  font-size: 28rpx;
+  font-weight: 800;
+  width: 180rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  letter-spacing: 2rpx;
+}
+.heng-price{
+  color: darkorange;
+  font-weight: 800;
+  font-size: 24rpx;
+}
+.heng-location-and-date{
+  color: #ababab;
+}
+.heng-location{
+  margin-right:20rpx;
+}
+.heng-status-and-talk, .heng-name-and-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heng-status text{
+  background: #c1cdb7;
+  color: #8696a6;
+  padding: 5rpx 8rpx;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+}
+

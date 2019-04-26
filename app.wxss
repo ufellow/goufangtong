@@ -1,0 +1,44 @@
+/**app.wxss**/
+/* color: #01b35c */
+page{
+  font-size: 24rpx;
+  background: 	#EEEED1;
+}
+.tabbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 130rpx;
+  background: #fff;
+  box-sizing: border-box;
+  color: #bfbfbf;
+  border-top:  1rpx solod grey;
+}
+
+.tabbar .tabbar-item {
+  float: left;
+  width: 33%;
+  font-size: 0;
+  height: 100%;
+  text-align: center;
+}
+
+.tabbar .tabbar-item image {
+  margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;  
+}
+
+.tabbar .tabbar-item .tabbar-item-text {
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #ccc;
+
+}
+
+.tabbar .tabbar-item .tabbar-item-text.active {
+  color: #118c2f;
+}
+

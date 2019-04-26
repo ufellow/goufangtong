@@ -1,0 +1,141 @@
+/* components/conditions/components.wxss */
+
+.condition-container{
+  width: 100%;
+  background-color: #fff;
+  /* padding: 20rpx; */
+  font-size: 22rpx;
+  position: absolute;
+  z-index: 999;
+}
+.condition-title-box{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 20rpx; */
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  }
+.condition-title{
+  display: flex;
+  align-items: center;
+  color: #6b6b6b;
+}
+.condition-title text{
+
+}
+.condition-title image{
+  width: 24rpx;
+  height:24rpx;
+  margin: 10rpx;
+}
+.active{
+  color: #15c9a0;
+}
+/* 区域 样式 */
+.condition-content-region{
+  height: 500rpx;
+  display: flex;
+  /* flex:; */
+}
+.condition-region-left{
+  height: 100%;
+  background: #f5f5f5;
+}
+.condition-town-metro{
+  padding: 25rpx 50rpx;
+}
+.condition-region-right{
+  flex: 1;
+  display: flex;
+}
+.condition-region-right1{
+  height: 100%;
+  overflow: auto;
+}
+.condition-regions{
+  padding: 25rpx 40rpx;
+}
+.condition-region-right2{
+  height: 100%;
+  flex: 1;
+   overflow: auto;
+}
+.town-checkbox{
+  display: flex;
+  flex-direction: column;
+}
+.checkbox{
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 50rpx;
+}
+
+.wayActive, .regionActive, .checkboxActive{
+  color: #15c9a0;
+}
+.townSelectedAll{
+   color: #15c9a0;
+}
+/* 地铁 */
+.condition-metro{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  height: 150rpx;
+}
+.metro-item{
+  display: block;
+  width: 28%;
+  height: 60rpx;
+  text-align: center;
+  background: #f5f5f5;
+  line-height: 60rpx;
+  margin: 10rpx;
+}
+.metroActive{
+  color: #15c9a0;
+  background-color: #f5f7f8;
+}
+
+/* 户型 */
+.condition-content-box{
+  display: flex;
+  flex-wrap: wrap;  
+  padding-top: 20rpx; 
+}
+.condition-housetype{
+  display: block;
+  width: 22%;
+  height: 60rpx;
+  text-align: center;
+  background: #f5f5f5;
+  line-height: 60rpx;
+  margin: 10rpx;  
+}
+
+.houseActive{
+  color: #15c9a0;
+  background-color: #f5f7f8;
+}
+.condition-clear-confirm{
+  display: flex;
+  font-size: 28rpx;
+  font-weight: 500;
+  /* margin: 10rpx; */
+}
+.condition-clear{
+  background-color: #f5f5f5;
+  padding: 20rpx 80rpx;
+  letter-spacing: 2rpx;
+}
+.condition-confirm{
+  background-color: #15c9a0;
+  text-align: center;
+  color: #fff;
+  padding: 20rpx 0;
+  flex: 1;
+  letter-spacing: 2rpx;
+}
+.condition-area{
+  /* font-size:  */
+}

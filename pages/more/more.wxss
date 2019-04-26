@@ -1,0 +1,95 @@
+/* pages/more/more.wxss */
+page{
+  height: 100%;
+}
+.more-container{
+  height: 100%;
+}
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.nodata{
+  margin-top: 500rpx;
+  text-align: center;
+  height: 100%;
+}
+.displays{
+  background-color: #fff;
+  padding: 15rpx 20rpx;
+}
+.heng-box{
+  display: flex;
+  border-top: solid 2rpx gainsboro;
+  /* border-bottom: solid 2rpx gainsboro; */
+  padding: 20rpx 0;
+}
+.heng-box:first-child{
+  border: none;
+}
+.heng-left{
+  width: 200rpx;
+  height: 150rpx;
+  position: relative;
+}
+.heng-left image{
+  height: 100%;
+  width: 100%;
+}
+.heng-left .guanzhu{
+  color: white;
+  font-weight: 550;
+  position: absolute;
+  bottom: 16rpx;
+  left: 16rpx;
+}
+
+.heng-talk image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.heng-right{
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heng-right{
+  padding: 5rpx 8rpx;
+}
+.heng-louPanName{
+  font-size: 28rpx;
+  font-weight: 800;
+  width: 180rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  letter-spacing: 2rpx;
+}
+.heng-price{
+  color: darkorange;
+  font-weight: 800;
+  font-size: 24rpx;
+}
+.heng-location-and-date{
+  color: #ababab;
+}
+.heng-location{
+  margin-right:20rpx;
+}
+.heng-status-and-talk, .heng-name-and-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heng-status text{
+  background: #c1cdb7;
+  color: #8696a6;
+  padding: 5rpx 8rpx;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+}
+

@@ -1,0 +1,79 @@
+<!--pages/search/search.wxml-->
+<view class='search-container'>
+  <view class='search-top'>
+        <view class='search-top-left'>
+          <view class='select'>
+              <view class='selectedItem' bindtap='handleClick'>{{selectList[selectedId]}}</view>
+              <view class='selectList' wx:if='{{isShow}}'>
+              <block wx:for="{{selectList}}" wx:key="{{idnex}}">
+                  <view class='select-item {{selectedId == index?"selectedActive":""}}' data-selectedId='{{index}}' bindtap='handleSelect'>{{item}}</view>                  </block>
+              </view>
+          </view>
+            <view class='search-input-box'>
+              <image src='/images/search.png'></image>
+              <input type='text' placeholder='搜索： 新景璟誉府' bindinput='searchInput'>{{inputValue}}</input>
+              <icon type='clear' size='20' style='margin-right:20rpx;' bindtap='handleClear'></icon>
+            </view>
+        </view>  
+        <view class='search-top-right' bindtap='search'>
+            搜索
+        </view>     
+  </view>
+  <view class='search-bottom' wx:if="{{searchResult.length <= 0}}">
+    <view class='search-history'>
+      <view class='search-history-title'>
+        <text>历史搜索</text>
+        <image src='/images/delete.png' bindtap='clearHistory'></image>
+      </view>
+      <view class='box'>
+        <block wx:for="{{historyList}}"  wx:key="index">
+            <text wx:if="{{item.search!=null || item.search !=''|| item.search!='null'}}" data-search='{{item.search}}' bindtap='clickHistorySearch'>{{item.search}}</text>
+        </block>
+      </view>
+    </view>
+    <view class='hot-search'>
+        <view class='hot-search-title'>热门搜索</view>
+        <view class='box'>
+          <text>新景璟誉府</text>
+          <text>新景璟誉府府</text>
+          <text>新景璟誉府</text>
+          <text>新景璟誉府</text>
+          <text>新景璟誉府</text>
+          <text>新景璟</text>
+          <text>新景璟</text>
+        </view>
+    </view>
+  </view>
+   <view class='displays' wx:for="{{searchResult}}">
+        <view class='heng-box' wx:key="{{index}}">
+          <view class='heng-left'>
+            <image src="{{item.picture}}"></image>
+            <view class='guanzhu'>
+                <text>222w</text>
+            </view>
+          </view>
+          <view class='heng-right'>
+             <view class='heng-name-and-price'>
+               <view class='heng-louPanName'>{{item.name}}</view>
+               <view class='heng-price' wx:if="{{item.price!=''}}">{{item.price}}元/m²</view>
+              </view>
+              <view class='heng-location-and-date'>
+                  <text class='heng-location'>{{item.city}}</text>
+                  <text class='heng-date'>摇号时间：2019.04.22</text>
+              </view>
+              <view class='heng-status-and-talk'>
+                  <view class='heng-status'>
+                    <text>在售</text>
+                  </view>
+                  <view class='heng-talk'>
+                    <image src='/images/zixun.png'></image>
+                    <text>200</text>
+                  </view>
+              </view>
+          </view>
+       </view>
+      </view>
+  <navigator url='/pages/index/index' class='goToHome'>
+  <image src='/images/shouye.png'></image>
+  首页</navigator>
+</view>

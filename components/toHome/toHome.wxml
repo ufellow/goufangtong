@@ -1,0 +1,6 @@
+<!--components/toHome/toHome.wxml-->
+<view class='tohome'>
+   <navigator url='/pages/index/index' class='goToHome'>
+  <image src='/images/shouye.png'></image>
+  首页</navigator>
+</view>
